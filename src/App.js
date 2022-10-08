@@ -17,7 +17,8 @@ function App() {
 
   return (
     <>
-      <Header title="Kalkulator walutowy" />
+      <Header
+        title="Kalkulator walutowy" />
       <Form
         calculateResult={calculateResult}
         amount={amount}
