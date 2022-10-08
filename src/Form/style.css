@@ -29,6 +29,7 @@
 
 .form__button:hover {
     background-color: hsl(0, 0%, 66%);
+    transition: 1s;
 }
 
 .form__button:active {

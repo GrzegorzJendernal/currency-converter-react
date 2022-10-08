@@ -4,7 +4,7 @@ const Result = ({ result }) => {
     if (result !== 0)
         return (
             <p className="result">
-                Posiadając {result.amount} PLN otrzymam: {result.outcome.toFixed(2)} {result.currency}
+                {result.amount} PLN = {result.outcome.toFixed(2)} {result.currency}
             </p>);
 }
 

@@ -27,8 +27,6 @@ function App() {
         currency={currency}
         setCurrency={setCurrency} />
       <Result
-        amount={amount}
-        currency={currency}
         result={result} />
       <Footer />
     </>
