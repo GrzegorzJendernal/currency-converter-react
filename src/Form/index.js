@@ -1,10 +1,19 @@
 import "./style.css";
-import Label from "../Label";
-import Input from "../Input";
-import Select from "../Select";
+import Label from "./Label";
+import Input from "./Input";
+import Select from "./Select";
 import exchangeRate from "./exchangeRate";
+import { useState } from "react";
 
-const Form = ({ calculateResult, amount, currency, setAmount, setCurrency }) => {
+const Form = ({ setResult }) => {
+    const [amount, setAmount] = useState("");
+    const [currency, setCurrency] = useState(exchangeRate[0].shortcut);
+
+    const calculateResult = ({ amount, currency }) => {
+        const rate = exchangeRate.find(({ shortcut }) => shortcut === currency).rate;
+        setResult({ outcome: amount / rate, currency, amount });
+    };
+
     const onFormSubmit = (event) => {
         event.preventDefault();
         calculateResult({ amount, currency });
