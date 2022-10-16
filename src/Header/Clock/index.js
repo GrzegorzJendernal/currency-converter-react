@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import "./style.css";
 
 const Clock = () => {
     const [myDate, setMyDate] = useState(new Date());
@@ -8,15 +9,26 @@ const Clock = () => {
         day: "numeric",
         year: "numeric",
     });
-    const hourToRender = myDate.toLocaleTimeString(undefined, {
+
+    const timeToRender = myDate.toLocaleTimeString(undefined, {
         hour: "numeric",
         minute: "numeric",
         second: "numeric",
     });
-    setInterval(() => { setMyDate(new Date()) }, 1000);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setMyDate(new Date())
+        }, 1000);
+
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, []);
+
     return (
-        <span className="header__clock">
-            Dzisiaj jest {dateToRender}, {hourToRender}
+        <span className="clock">
+            Dzisiaj jest {dateToRender}, {timeToRender}
         </span>
     )
 };
