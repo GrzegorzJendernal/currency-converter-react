@@ -1,11 +1,11 @@
-import "./style.css";
+import { StyledHeader } from "./styled";
 import Clock from "./Clock";
 
 const Header = ({ title }) => (
-    <header className="header">
+    <StyledHeader>
         <Clock />
         <h1>{title}</h1>
-    </header>
+    </StyledHeader>
 );
 
 export default Header; 
