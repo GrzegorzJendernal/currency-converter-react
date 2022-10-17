@@ -1,11 +1,11 @@
-import "./style.css";
+import { StyledResult } from "./styled";
 
 const Result = ({ result }) => {
     if (result !== undefined)
         return (
-            <p className="result">
+            <StyledResult>
                 {result.amount} PLN = {result.outcome.toFixed(2)} {result.currency}
-            </p>);
+            </StyledResult>);
 }
 
 export default Result;
