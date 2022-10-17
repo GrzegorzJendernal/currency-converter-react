@@ -1,4 +1,4 @@
-import "./style.css";
+import { Fieldset, Header, Button } from "./styled";
 import Label from "./Label";
 import Input from "./Input";
 import Select from "./Select";
@@ -21,9 +21,9 @@ const Form = ({ setResult }) => {
 
     return (
         <>
-            <form className="form" onSubmit={onFormSubmit}>
-                <fieldset className="form__field">
-                    <h1 className="form__header">Przelicz swoją walutę!</h1>
+            <form onSubmit={onFormSubmit}>
+                <Fieldset>
+                    <Header>Przelicz swoją walutę!</Header>
                     <Label
                         title="Ile posiadam w złotych polskich?"
                         body={
@@ -42,8 +42,8 @@ const Form = ({ setResult }) => {
                         />
                         }
                     />
-                    <button className="form__button">Przelicz</button>
-                </fieldset>
+                    <Button>Przelicz</Button>
+                </Fieldset>
             </form>
         </>
     )

@@ -1,9 +1,11 @@
+import { StyledLabel } from "./styled";
+
 const Label = ({ title, body }) => (
     <p>
-        <label className="form__label">
+        <StyledLabel>
             {title}<br />
             {body}
-        </label>
+        </StyledLabel>
     </p>
 );
 

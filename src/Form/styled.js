@@ -1,37 +1,34 @@
-.form {
-    text-align: center;
-}
+import styled from "styled-components";
 
-.form__field {
+const Fieldset = styled.fieldset`
     background-color: #cfcfcf;
     margin: 5px;
     padding: 5px;
     border-radius: 10px;
-}
+    text-align: center;
+`;
 
-.form__header {
+const Header = styled.h1`
     font-size: 20px;
     font-weight: bold;
-}
+`;
 
-.form__label {
-    line-height: 2;
-}
-
-.form__button {
+const Button = styled.button`
     margin: 20px auto;
     padding: 10px;
     display: block;
     color: #ffffff;
     background-color: #858585;
     border-radius: 10px;
-}
 
-.form__button:hover {
+    &:hover {
     background-color: hsl(0, 0%, 66%);
     transition: 1s;
-}
+    }
 
-.form__button:active {
+    &:active {
     background-color: hsl(0, 0%, 35%);
-}
+    }
+`;
+
+export { Fieldset, Header, Button };
