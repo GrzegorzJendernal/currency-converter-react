@@ -22,12 +22,12 @@ const Button = styled.button`
     border-radius: 10px;
 
     &:hover {
-    background-color: hsl(0, 0%, 66%);
-    transition: 1s;
+        background-color: hsl(0, 0%, 66%);
+        transition: 1s;
     }
 
     &:active {
-    background-color: hsl(0, 0%, 35%);
+        background-color: hsl(0, 0%, 35%);
     }
 `;
 
