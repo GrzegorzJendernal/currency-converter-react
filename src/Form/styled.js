@@ -8,7 +8,7 @@ const Fieldset = styled.fieldset`
     text-align: center;
 `;
 
-const Header = styled.h1`
+const Header = styled.h2`
     font-size: 20px;
     font-weight: bold;
 `;
