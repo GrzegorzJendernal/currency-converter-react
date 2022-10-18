@@ -2,7 +2,7 @@ import { useCurrentDate } from "./useCurrentDate";
 import { StyledClock } from "./styled";
 
 const Clock = () => {
-    const myDate = useCurrentDate();
+    const { myDate } = useCurrentDate();
 
     const dateToRender = myDate.toLocaleDateString(undefined, {
         month: "long",
