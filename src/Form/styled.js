@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Fieldset = styled.fieldset`
     background-color: #cfcfcf;
-    margin: 5px;
+    margin: 25px 5px;
     padding: 5px;
     border-radius: 10px;
     text-align: center;
