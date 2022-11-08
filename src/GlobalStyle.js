@@ -15,12 +15,10 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background-image: url("${background}");
         background-color: #d9d9d9;
-        background-size: contain;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 90vh;
+        background-size: cover;
+        max-width: 550px;
         padding: 20px;
+        margin: 20px auto;
         font-family: 'Lato', sans-serif;
         line-height: 1.5;
     }
