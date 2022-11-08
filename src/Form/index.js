@@ -19,6 +19,8 @@ const Form = ({ setResult }) => {
         calculateResult({ amount, currency });
     };
 
+
+
     return (
         <>
             <form onSubmit={onFormSubmit}>
