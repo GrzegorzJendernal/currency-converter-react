@@ -5,13 +5,13 @@ import Select from "./Select";
 import exchangeRate from "./exchangeRate";
 import { useState } from "react";
 
-const Form = ({ setResult }) => {
+const Form = ({ setResult, exchange }) => {
     const [amount, setAmount] = useState("");
-    const [currency, setCurrency] = useState(exchangeRate[0].shortcut);
+    const [currency, setCurrency] = useState("USD");
 
     const calculateResult = ({ amount, currency }) => {
-        const rate = exchangeRate.find(({ shortcut }) => shortcut === currency).rate;
-        setResult({ outcome: amount / rate, currency, amount });
+        const rate = exchange.rates[currency];
+        setResult({ outcome: amount * rate, currency, amount });
     };
 
     const onFormSubmit = (event) => {
@@ -19,36 +19,35 @@ const Form = ({ setResult }) => {
         calculateResult({ amount, currency });
     };
 
-
-
-    return (
-        <>
-            <form onSubmit={onFormSubmit}>
-                <Fieldset>
-                    <Header>Przelicz swoją walutę!</Header>
-                    <Label
-                        title="Ile posiadam w złotych polskich?"
-                        body={
-                            <Input
-                                amount={amount}
-                                setAmount={setAmount}
-                            />
-                        }
-                    />
-                    <Label
-                        title="W jakiej walucie chcę otrzymać wynik?"
-                        body={<Select
-                            currency={currency}
-                            setCurrency={setCurrency}
-                            exchangeRate={exchangeRate}
+    if (exchange !== null)
+        return (
+            <>
+                <form onSubmit={onFormSubmit}>
+                    <Fieldset>
+                        <Header>Przelicz swoją walutę!</Header>
+                        <Label
+                            title="Ile posiadam w złotych polskich?"
+                            body={
+                                <Input
+                                    amount={amount}
+                                    setAmount={setAmount}
+                                />
+                            }
                         />
-                        }
-                    />
-                    <Button>Przelicz</Button>
-                </Fieldset>
-            </form>
-        </>
-    )
+                        <Label
+                            title="W jakiej walucie chcę otrzymać wynik?"
+                            body={<Select
+                                currency={currency}
+                                setCurrency={setCurrency}
+                                exchange={exchange}
+                            />
+                            }
+                        />
+                        <Button>Przelicz</Button>
+                    </Fieldset>
+                </form>
+            </>
+        )
 };
 
 export default Form; 

@@ -23,13 +23,14 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+
   return (
     <>
       <Header
         title="Kalkulator walutowy" />
       <Form
         setResult={setResult}
-
+        exchange={exchange}
       />
       <Result
         result={result}
