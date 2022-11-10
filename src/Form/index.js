@@ -2,15 +2,14 @@ import { Fieldset, Header, Button } from "./styled";
 import Label from "./Label";
 import Input from "./Input";
 import Select from "./Select";
-import exchangeRate from "./exchangeRate";
 import { useState } from "react";
 
-const Form = ({ setResult, exchange }) => {
+const Form = ({ setResult, exchangeRate }) => {
     const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState("USD");
 
     const calculateResult = ({ amount, currency }) => {
-        const rate = exchange.rates[currency];
+        const rate = exchangeRate.rates[currency];
         setResult({ outcome: amount * rate, currency, amount });
     };
 
@@ -19,7 +18,7 @@ const Form = ({ setResult, exchange }) => {
         calculateResult({ amount, currency });
     };
 
-    if (exchange !== null)
+    if (exchangeRate !== null)
         return (
             <>
                 <form onSubmit={onFormSubmit}>
@@ -39,7 +38,7 @@ const Form = ({ setResult, exchange }) => {
                             body={<Select
                                 currency={currency}
                                 setCurrency={setCurrency}
-                                exchange={exchange}
+                                exchangeRate={exchangeRate}
                             />
                             }
                         />

@@ -1,9 +1,9 @@
-const Select = ({ currency, setCurrency, exchange }) =>
+const Select = ({ currency, setCurrency, exchangeRate }) =>
 (
     <select
         value={currency}
         onChange={({ target }) => setCurrency(target.value)}>
-        {Object.keys(exchange.rates).map((currency) => (
+        {Object.keys(exchangeRate.rates).map((currency) => (
             <option
                 key={currency}
                 value={currency}>
