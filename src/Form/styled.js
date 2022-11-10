@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 const Fieldset = styled.fieldset`
-    background-color: #cfcfcf;
-    margin: 25px 5px;
-    padding: 5px;
-    border-radius: 10px;
-    text-align: center;
+    border-top: 1px  solid #000000;
+    border-bottom: 1px  solid #000000;
+    border-left: none;
+    border-right: none;
 `;
 
 const Header = styled.h2`

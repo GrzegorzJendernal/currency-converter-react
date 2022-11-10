@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px;
-    background-color: #cfcfcf;
-    text-align: center;
+    border-top: 1px  solid #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
 `;

@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
         background-image: url("${background}");
         background-color: #d9d9d9;
         background-size: cover;
-        max-width: 550px;
+        max-width: 600px;
         padding: 20px;
         margin: 20px auto;
         font-family: 'Lato', sans-serif;
