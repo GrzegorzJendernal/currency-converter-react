@@ -1,7 +1,7 @@
 import { StyledFooter } from "./styled";
 
 const Footer = ({ exchangeRate }) => {
-    if (exchangeRate !== null)
+    if (exchangeRate !== null && exchangeRate !== "error")
         return (
             <StyledFooter>Kurs walut pobrany z Europejskiego Banku Centralnego, aktualny na dzień: {exchangeRate.date}
             </StyledFooter>

@@ -18,7 +18,7 @@ const Form = ({ setResult, exchangeRate }) => {
         calculateResult({ amount, currency });
     };
 
-    if (exchangeRate !== null)
+    if (exchangeRate !== null && exchangeRate !== "error")
         return (
             <>
                 <form onSubmit={onFormSubmit}>

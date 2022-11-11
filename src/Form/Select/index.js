@@ -1,5 +1,6 @@
-const Select = ({ currency, setCurrency, exchangeRate }) =>
-(
+import { currencies } from "../../useCurrencyRate";
+
+const Select = ({ currency, setCurrency, exchangeRate }) => (
     <select
         value={currency}
         onChange={({ target }) => setCurrency(target.value)}>
