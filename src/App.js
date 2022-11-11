@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Form from "./Form";
 import Result from "./Result";
+import Loading from './Loading';
 import { StyleddApp } from "./styled";
 import { useCurrencyRate } from "./useCurrencyRate";
 
@@ -14,6 +15,7 @@ function App() {
     <StyleddApp>
       <Header
         title="Kalkulator walutowy" />
+      <Loading exchangeRate={exchangeRate} />
       <Form
         setResult={setResult}
         exchangeRate={exchangeRate}

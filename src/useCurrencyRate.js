@@ -8,13 +8,13 @@ export const useCurrencyRate = () => {
         const timer = setTimeout(() => {
             (async () => {
                 try {
-                    const response = await axios.get("https://api.exchangerate.host/latest?base=PLN&source=ecb&");
+                    const response = await axios.get("https://api.exchangerate.host/latest?base=PLN&source=ecb&v=_actual_date_");
                     setExchangeRate(response.data);
                 } catch (error) {
                     console.log(error);
                 }
             })();
-        }, "1000");
+        }, "2000");
         return () => clearTimeout(timer);
     }, []);
 
