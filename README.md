@@ -59,4 +59,8 @@ To create the page I used:
 
 5. React Create App
 
+6. Styled Components
+
+7. Axios
+
 ###  Enjoy using!
