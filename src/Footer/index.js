@@ -6,6 +6,6 @@ const Footer = ({ exchangeRate }) => {
             <StyledFooter>Kurs walut pobrany z Europejskiego Banku Centralnego, aktualny na dzień: {exchangeRate.date}
             </StyledFooter>
         );
-}
+};
 
 export default Footer; 

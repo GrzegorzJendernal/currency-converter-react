@@ -15,7 +15,8 @@ function App() {
   return (
     <StyleddApp>
       <Header
-        title="Kalkulator walutowy" />
+        title="Kalkulator walutowy"
+      />
       <Loading exchangeRate={exchangeRate} />
       <LoadError exchangeRate={exchangeRate} />
       <Form
