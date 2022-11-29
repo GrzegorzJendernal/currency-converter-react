@@ -1,7 +1,7 @@
 import { Wrapper } from "./styled";
 
 const LoadError = ({ exchangeRate }) => {
-    if (exchangeRate === "error")
+    if (exchangeRate.status === "error")
         return (
             <Wrapper>
                 Ojojoj... Wygląda, że coś poszło nie tak jak powinno. <br />

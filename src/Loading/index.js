@@ -1,7 +1,7 @@
 import { Wrapper } from "./styled";
 
 const Loading = ({ exchangeRate }) => {
-    if (exchangeRate === null)
+    if (exchangeRate.status === "loading")
         return (
             <Wrapper>
                 Trwa pobieranie aktualnych kursów walut. <br />
