@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export const useCurrencyRate = () => {
-    const [exchangeRate, setExchangeRate] = useState(null);
+    const [exchangeRate, setExchangeRate] = useState({ status: "loading" });
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -11,10 +11,10 @@ export const useCurrencyRate = () => {
                     const response = await axios.get("https://api.exchangerate.host/latest?base=PLN&source=ecb&&&");
                     setExchangeRate(response.data);
                 } catch (error) {
-                    setExchangeRate("error");
+                    setExchangeRate({ status: "error" });
                 }
             })();
-        }, "2000");
+        }, 2000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -48,7 +48,7 @@ export const currencies = [
     { short: "PHP", name: "Peso filipińskie" },
     { short: "PLN", name: "Złoty polski" },
     { short: "RON", name: "Nowa leja rumuńska" },
-    { short: "SEK", name: "Krona szwedzka" },
+    { short: "SEK", name: "Korona szwedzka" },
     { short: "SGD", name: "Dolar singapurski" },
     { short: "THB", name: "Baht tajlandzki" },
     { short: "TRY", name: "Dolar Trynidadu/Tobago" },
