@@ -1,5 +1,7 @@
 # Grzegorz Jendernal - Currency converter
 ![Site screen](https://raw.githubusercontent.com/GrzegorzJendernal/currency-converter-react/main/public/screen.png)
+
+## Demo
 [Currency Converter in React!](https://grzegorzjendernal.github.io/currency-converter-react/)
 ## Description
 Hello! This is my currency converter. You can calculate your Polish Zlotys on others currency. You will get the result in Euro, US Dollars or Columbian Pesos.
