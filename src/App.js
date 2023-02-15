@@ -1,34 +1,30 @@
 import React, { useState } from 'react';
-import Header from "./Header";
+import Body from "./Body";
 import Footer from "./Footer";
-import Form from "./Form";
+import { GlobalStyle } from "./GlobalStyle";
+import Header from "./Header";
 import Result from "./Result";
-import Loading from './Loading';
-import LoadError from './LoadError';
 import { StyleddApp } from "./styled";
-import { useCurrencyRate } from "./useCurrencyRate";
+
 
 function App() {
-  const [result, setResult] = useState(undefined);
-  const { exchangeRate } = useCurrencyRate();
-
-  return (
-    <StyleddApp>
-      <Header
-        title="Kalkulator walutowy"
-      />
-      <Loading exchangeRate={exchangeRate} />
-      <LoadError exchangeRate={exchangeRate} />
-      <Form
-        setResult={setResult}
-        exchangeRate={exchangeRate}
-      />
-      <Result
-        result={result}
-      />
-      <Footer exchangeRate={exchangeRate} />
-    </StyleddApp>
-  );
-};
+	const [result, setResult] = useState(undefined);
+	
+	return (
+		<>
+		<GlobalStyle/>
+		<StyleddApp>
+			<Header
+				title="Kalkulator walutowy"
+			/>
+			<Body setResult={setResult}/>
+			<Result
+				result={result}
+			/>
+			<Footer/>
+		</StyleddApp>
+			</>
+	);
+}
 
 export default App;
