@@ -12,6 +12,28 @@ Hello! This is my currency converter. You can calculate your Polish Zlotys on ot
 - select the currency you want to exchange,
 - click on button.
 
+##  Technologies
+
+To create the page I used:
+
+1. TypeScript
+
+2. JavaScript
+
+3. React Create App
+
+4. Styled Components
+
+5. React-Query
+
+6. HTML
+
+7. CSS
+
+8. BEM convention
+
+9. Axios
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -48,23 +70,5 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-##  Technologies
-
-To create the page I used:
-
-1. HTML
-
-2. CSS
-
-3. JavaScript
-
-4. BEM convention
-
-5. React Create App
-
-6. Styled Components
-
-7. Axios
 
 ###  Enjoy using!
