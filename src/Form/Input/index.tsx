@@ -1,6 +1,9 @@
-const Input = ({amount, setAmount}) => (
+import React from "react";
+import { InputProps } from "../../types/intefaces";
+
+const Input = ({amount, setAmount}: InputProps) => (
 	<input
-		value={amount}
+		value={"" || amount}
 		onChange={({target}) => setAmount(target.value)}
 		type="number"
 		min="0"

@@ -1,4 +1,7 @@
-export const currencies = [
+export type Currency = { short: string, name: string };
+export type Currencies = Currency[];
+
+export const currencies: Currencies = [
 	{short: "AUD", name: "Dolar australijski"},
 	{short: "BGN", name: "Lewa bułgarska"},
 	{short: "BRL", name: "Real brazylijski"},
