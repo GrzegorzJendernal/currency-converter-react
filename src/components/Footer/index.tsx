@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { StyledFooter } from "./styled";
-import { Rates } from "../types/data";
+import { Rates } from "../../types/data";
 
 const Footer = () => {
 	const {data} = useQuery<Rates>("rates");

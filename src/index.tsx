@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import App from './App';
-import { getRates } from "./getRates";
+import { getRates } from "./dataFiles/getRates";
 import reportWebVitals from './reportWebVitals';
 
 const queryClient = new QueryClient({

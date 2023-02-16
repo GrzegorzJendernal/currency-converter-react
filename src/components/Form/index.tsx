@@ -4,8 +4,8 @@ import Label from "./Label";
 import Select from "./Select";
 import { Button, Fieldset, Header } from "./styled";
 import { useQuery } from "react-query";
-import { Rates } from "../types/data";
-import { FormProps, IResult } from "../types/intefaces";
+import { Rates } from "../../types/data";
+import { FormProps, IResult } from "../../types/intefaces";
 
 const Form = ({setResult}: FormProps) => {
 	const {data} = useQuery<Rates>("rates");

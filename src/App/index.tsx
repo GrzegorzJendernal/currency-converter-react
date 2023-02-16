@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import Body from "./Body";
-import Footer from "./Footer";
+import Body from "../components/Body";
+import Footer from "../components/Footer";
 import { GlobalStyle } from "./GlobalStyle";
-import Header from "./Header";
-import Result from "./Result";
+import Header from "../components/Header";
+import Result from "../components/Result";
 import { StyleddApp } from "./styled";
-import { IResult } from "./types/intefaces";
+import { IResult } from "../types/intefaces";
 
-function App() {
+const App = () => {
 	const [result, setResult] = useState<IResult | undefined>(undefined);
 
 	return (
