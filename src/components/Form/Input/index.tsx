@@ -1,5 +1,5 @@
 import React from "react";
-import { InputProps } from "../../types/intefaces";
+import { InputProps } from "../../../types/intefaces";
 
 const Input = ({amount, setAmount}: InputProps) => (
 	<input

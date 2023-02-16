@@ -1,9 +1,9 @@
-import { currencies } from "../../currencies";
+import { currencies } from "../../../dataFiles/currencies";
 import { Wrapper } from "./styled";
 import React from "react";
 import { useQuery } from "react-query";
-import { Rates } from "../../types/data";
-import { SelectProps } from "../../types/intefaces";
+import { Rates } from "../../../types/data";
+import { SelectProps } from "../../../types/intefaces";
 
 const Select = ({currency, setCurrency}: SelectProps) => {
 	const {data} = useQuery<Rates>("rates");
@@ -12,7 +12,6 @@ const Select = ({currency, setCurrency}: SelectProps) => {
 
 	return (
 		<Wrapper>
-			{name.name}
 			<select
 				value={currency}
 				onChange={({target}) => setCurrency(target.value)}>
@@ -24,6 +23,7 @@ const Select = ({currency, setCurrency}: SelectProps) => {
 					</option>
 				))}
 			</select>
+			{name.name}
 		</Wrapper>
 	);
 };

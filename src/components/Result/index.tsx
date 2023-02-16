@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledResult } from "./styled";
-import { ResultProps } from "../types/intefaces";
+import { ResultProps } from "../../types/intefaces";
 
 const Result = ({result}: ResultProps) => (
 	<StyledResult>
