@@ -1,4 +1,4 @@
-import { currencies } from "../../../dataFiles/currencies";
+import { currencies, Currency } from "../../../dataFiles/currencies";
 import { Wrapper } from "./styled";
 import React from "react";
 import { useQuery } from "react-query";
@@ -6,9 +6,8 @@ import { Rates } from "../../../types/data";
 import { SelectProps } from "../../../types/intefaces";
 
 const Select = ({currency, setCurrency}: SelectProps) => {
-	const {data} = useQuery<Rates>("rates");
-	const name = currencies.find(({short}) => short === currency);
-	if (!name || !data) return (<></>);
+	const {data} = useQuery("rates") as Rates;
+	const name = currencies.find(({short}) => short === currency) as Currency;
 
 	return (
 		<Wrapper>
