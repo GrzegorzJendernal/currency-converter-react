@@ -1,4 +1,5 @@
 export interface Rates {
+	data: {
 	motd: {
 		msg: string;
 		url: string;
@@ -8,5 +9,6 @@ export interface Rates {
 	date: string;
 	rates: {
 		[key: string]: number;
+	};
 	};
 }
