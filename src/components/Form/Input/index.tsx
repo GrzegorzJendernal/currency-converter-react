@@ -1,15 +1,16 @@
 import React from "react";
 import { InputProps } from "../../../types/intefaces";
+import { StyledInput } from "./styled";
 
 const Input = ({amount, setAmount}: InputProps) => (
-	<input
+	<StyledInput
 		value={"" || amount}
 		onChange={({target}) => setAmount(target.value)}
 		type="number"
 		min="0"
 		step="0.01"
 		required
-		placeholder="wpisz wartość w PLN"/>
+		placeholder="wpisz posiadaną kwotę"/>
 );
 
 export default Input;
