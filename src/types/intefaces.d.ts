@@ -22,7 +22,8 @@ export interface FormProps {
 export interface IResult {
 	outcome: number;
 	amount: number;
-	currency: string;
+	originalCurrency: string;
+	targetCurrency: string;
 }
 
 export interface HeaderProps {
