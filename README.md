@@ -1,16 +1,20 @@
 # Grzegorz Jendernal - Currency converter
-![Site screen](https://raw.githubusercontent.com/GrzegorzJendernal/currency-converter-react/main/public/screen.png)
+
+## Preview
+![Site screen](https://raw.githubusercontent.com/GrzegorzJendernal/currency-converter-react/main/demo.gif)
 
 ## Demo
 [Currency Converter in React!](https://grzegorzjendernal.github.io/currency-converter-react/)
 
 ## Description
-Hello! This is my currency converter. You can calculate your Polish Zlotys on others currency. Rates downloaded from European Central Bank.
+Hello! This is my currency converter. You can calculate your money to other currencies. Rates downloaded from European 
+Central Bank.
 
 ## How to use?
-- type how many PLN You have,
-- select the currency you want to exchange,
-- click on button.
+- enter the amount you want to convert,
+- select the currency from which you want to convert,
+- select the target currency,
+- press the button.
 
 ##  Technologies
 
